@@ -1,0 +1,461 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f5f9fc;
+}
+
+/* ================= HEADER ================= */
+.header{
+  background:#fff;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.header span{
+  color:#1296db;
+}
+
+/* ================= HERO ================= */
+.hero{
+  background:linear-gradient(135deg,#0a6fa3,#1296db);
+  text-align:center;
+  padding:60px 20px;
+  color:#fff;
+}
+
+/* Profilo photo */
+.photo{
+  width:220px;              /* increased slightly to fit hair */
+  height:220px;
+  margin:0 auto 20px;
+  border-radius:50%;
+  border:6px solid rgba(255,255,255,0.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  /* move focal point up so head and hair are visible */
+  object-position:50% 20%;
+}
+
+/* Responsive: make photo smaller on narrow screens */
+@media (max-width:480px){
+  .photo{ width:140px; height:140px; border-width:5px; }
+}
+
+
+/*-- buttons --*/
+.btn{
+  padding:12px 25px;
+  border-radius:30px;
+  border:none;
+  cursor:pointer;
+  margin:5px;
+  font-size:14px;
+}
+
+.primary{
+  background:#1296db;
+  color:#fff;
+}
+
+.outline{
+  background:transparent;
+  border:2px solid #fff;
+  color:#fff;
+}
+
+/* ================= SECTIONS ================= */
+.section{
+  padding:50px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.section h3,
+.section h4,
+.section p{
+  text-align:center;
+}
+
+/* ================= TICK MARK LIST STYLE ================= */
+.section ul{
+  list-style:none;       /* remove dots */
+  padding:0;
+  margin-top:20px;
+}
+
+.section ul li{
+  position:relative;
+  padding-left:30px;
+  margin-bottom:12px;
+  text-align:left;
+  display:inline-block;
+  width:100%;
+}
+
+.section ul li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:#1296db;
+  font-weight:700;
+}
+
+/* ================= SKILLS GRID ================= */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  justify-items:center;
+}
+
+/* ================= CONTACT SECTION ================= */
+.contact-section{
+  background:#2c3e50;
+  color:#fff;
+  border-radius:20px;
+}
+
+.contact-section h3{
+  text-align:center;
+}
+
+.underline{
+  width:60px;
+  height:4px;
+  background:#1296db;
+  margin:10px auto 30px;
+  border-radius:10px;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
+
+/* ================= CONTACT INFO ================= */
+.contact-info h4{
+  color:#1296db;
+  margin-bottom:25px;
+}
+
+.contact-row{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  margin-bottom:25px;
+}
+
+.contact-row i{
+  font-size:22px;
+  color:#1296db;
+  min-width:30px;
+}
+
+.contact-text span{
+  font-weight:600;
+}
+
+.contact-text p{
+  margin-top:5px;
+}
+
+/* ================= SOCIAL ICONS ================= */
+.social-icons a{
+  display:inline-block;
+  width:45px;
+  height:45px;
+  background:rgba(255,255,255,0.15);
+  border-radius:50%;
+  text-align:center;
+  line-height:45px;
+  margin-right:10px;
+  color:#fff;
+  font-size:20px;
+}
+
+/* ================= CARDS ================= */
+.card{
+  background:#fff;
+  color:#000;
+  padding:25px;
+  border-radius:15px;
+}
+
+/* ================= MESSAGE BOX ================= */
+.message-box{
+  background:#1f3b4d;
+  color:#fff;
+}
+
+.message-box input,
+.message-box textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:8px;
+  border:none;
+}
+
+.send-btn{
+  width:100%;
+  padding:12px;
+  background:#fff;
+  color:#1296db;
+  border-radius:25px;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:#0a6fa3;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+/* ================= SKILLS SECTION ================= */
+
+.skill-card{
+  background:#fff;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:transform 0.3s ease;
+}
+
+.skill-card:hover{
+  transform:translateY(-5px);
+}
+
+.skill-card h4{
+  color:#1296db;
+  margin-bottom:20px;
+  font-size:20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.skill-card ul{
+  list-style:none;
+  padding:0;
+}
+
+.skill-card ul li{
+  position:relative;
+  padding-left:30px;
+  margin-bottom:14px;
+  font-size:15px;
+}
+
+.skill-card ul li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:#1296db;
+  font-weight:700;
+}
+/* ================= ABOUT ME CARD ================= */
+
+.about-card{
+  background:#fff;
+  padding:35px 30px;
+  border-radius:18px;
+  max-width:900px;
+  margin:auto;
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+  text-align:center;
+}
+
+.about-title{
+  color:#222;          /* black heading */
+  font-size:28px;
+  font-weight:600;
+}
+
+.about-underline{
+  width:70px;
+  height:4px;
+  background:#1296db;  /* blue underline */
+  margin:12px auto 25px;
+  border-radius:10px;
+}
+
+.about-card p{
+  font-size:16px;
+  line-height:1.8;
+  color:#555;
+}
+
+/* ===== EDUCATION SECTION ===== */
+
+.education-card{
+  background:#fff;
+  padding:35px 30px;
+  border-radius:18px;
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+}
+
+.education-heading{
+  font-size:30px;
+  font-weight:600;
+  color:#222; /* BLACK */
+}
+
+/* underline EXACTLY centered */
+.education-underline{
+  width:70px;
+  height:4px;
+  background:#1296db; /* BLUE */
+  margin:12px auto 30px;
+  border-radius:10px;
+}
+
+.degree{
+  font-size:20px;
+  color:#333;
+  margin-bottom:12px;
+}
+
+.college{
+  font-size:16px;
+  color:#555;
+  margin-bottom:20px;
+}
+
+.edu-line{
+  font-size:16px;
+  margin-bottom:8px;
+}
+
+/* labels BLACK */
+.label{
+  color:#000;
+  font-weight:500;
+}
+
+/* values BLUE */
+.highlight{
+  color:#1296db;
+  font-weight:600;
+}
+
+/* ===== CERTIFICATIONS UNDERLINE ===== */
+
+.cert-heading{
+  font-size:28px;
+  font-weight:600;
+  color:#000; /* BLACK */
+  text-align:center;
+}
+
+/* blue underline exactly in middle */
+.cert-underline{
+  width:80px;
+  height:4px;
+  background:#1296db; /* BLUE */
+  margin:10px auto 25px;
+  border-radius:10px;
+}
+
+.cert-list{
+  list-style:none;
+  padding:0;
+}
+
+.cert-list li{
+  font-size:16px;
+  margin-bottom:12px;
+  position:relative;
+  padding-left:28px;
+}
+
+/* blue tick marks */
+.cert-list li::before{
+  content:"✓";
+  color:#1296db;
+  font-weight:bold;
+  position:absolute;
+  left:0;
+}
+
+/* ===== ACHIEVEMENTS SECTION ===== */
+
+.ach-heading{
+  font-size:28px;
+  font-weight:600;
+  color:#000; /* BLACK */
+  text-align:center;
+}
+
+/* blue underline centered */
+.ach-underline{
+  width:80px;
+  height:4px;
+  background:#1296db; /* BLUE */
+  margin:10px auto 25px;
+  border-radius:10px;
+}
+
+.ach-list{
+  list-style:none;
+  padding:0;
+}
+
+.ach-list li{
+  font-size:16px;
+  margin-bottom:12px;
+  position:relative;
+  padding-left:28px;
+}
+
+/* blue tick marks */
+.ach-list li::before{
+  content:"✓";
+  color:#1296db;
+  font-weight:bold;
+  position:absolute;
+  left:0;
+}
+/* EDUCATION GRID */
+.education-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+/* EDUCATION CARD (slight enhancement) */
+.education-card{
+  background:#fff;
+  padding:30px 25px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(0,0,0,0.12);
+}
